@@ -1,9 +1,9 @@
 #' Pass: do nothing
 #'
-#' @return Nothing!
+#' @return Literally nothing!
 #' @export pass
 #'
-#' @examples No example is necessary. Python's `pass` statement.
+#' @examples No example is necessary. Pythons `pass` statement.
 
 pass <- function () {
   

@@ -12,3 +12,6 @@ Nothing!
 \description{
 Pass: do nothing
 }
+\examples{
+No example is necessary. Pythons `pass` statement.
+}
