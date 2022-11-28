@@ -7,7 +7,7 @@
 pass()
 }
 \value{
-Nothing!
+Literally nothing!
 }
 \description{
 Pass: do nothing

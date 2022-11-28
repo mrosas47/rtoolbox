@@ -1,4 +1,4 @@
-#' Pass: do nothing
+#' @title Pass: do nothing
 #'
 #' @return Literally nothing!
 #' @export pass

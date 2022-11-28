@@ -20,6 +20,6 @@ x as a percentage of t
 Percentage
 }
 \examples{
-x100(25, 200)
+x100of(25, 200)
 
 }
