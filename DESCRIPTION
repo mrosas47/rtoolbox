@@ -10,8 +10,6 @@ Encoding: UTF-8
 LazyData: false
 RoxygenNote: 7.2.1
 Imports:
-    tidyverse,
-    glue,
-    Randomuseragent,
-    iptools,
+    dplyr,
+    stringr,
     sf
