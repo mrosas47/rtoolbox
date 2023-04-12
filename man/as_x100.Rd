@@ -2,24 +2,23 @@
 % Please edit documentation in R/as_x100.R
 \name{as_x100}
 \alias{as_x100}
-\title{Percentage}
+\title{As a percentage}
 \usage{
 as_x100(x, t, d = 2)
 }
 \arguments{
-\item{x}{value}
+\item{x}{Value.}
 
-\item{t}{total}
+\item{t}{Total.}
 
-\item{d}{digits to round}
+\item{d}{Digits to round to.}
 }
 \value{
 x as a percentage of t
 }
 \description{
-Percentage
+Takes a value and a total and returns the value as a percentage of that total.
 }
 \examples{
-as_x100(25, 200)
-
+# as_x100(25, 200, 3)
 }

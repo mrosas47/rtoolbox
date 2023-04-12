@@ -1,22 +1,27 @@
-#' rtime
+#' @title Prettier time
 #'
-#' @param secs if true includes seconds
+#' @description Sys.Time() but in a more familiar format and without unnecessary extras. HH:mm or HH:mm:ss
+#' 
+#' @param secs Include seconds? T/F
+#' 
+#' @import stringr
 #'
-#' @return current time
+#' @return Current time.
 #' @export rtime
 #'
-#' @examples 'rtime()'
+#' @examples # rtime()
+
 rtime <- function(secs = T) {
   
   current_time <- Sys.time()
   
   if (secs == T) {
     
-    stringy <- str_sub(current_time, 12, 19)
+    stringy <- stringr::str_sub(current_time, 12, 19)
     
   } else if (secs == F) {
     
-    stringy <- str_sub(current_time, 12, 16)
+    stringy <- stringr::str_sub(current_time, 12, 16)
     
   }
   

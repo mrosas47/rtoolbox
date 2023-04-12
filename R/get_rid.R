@@ -1,18 +1,21 @@
-#' @title Get rid of ...
+#' @title Get rid of variable
+#' 
+#' @description Get rid of variables in less steps.
 #'
-#' @param df data.frame
-#' @param var.name name (or names with c()) to be dropped
+#' @param df data.frame object.
+#' @param var.name Name (or names with c()) of variables to be dropped
+#' 
+#' @import dplyr
 #'
-#' @return data.frame
+#' @return df without the specified variables.
 #' @export get_rid
 #'
-#' @examples 'i really dont wanna write rn'
+#' @examples # df <- df |> get_rid('variableName')
 
 get_rid <- function (df, var.name) {
   
   stringy <- as.character(var.name)
-  
-  clone <- select(
+  clone <- dplyr::select(
     
     df,
     -all_of(stringy)

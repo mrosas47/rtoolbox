@@ -2,15 +2,15 @@
 % Please edit documentation in R/rdate.R
 \name{rdate}
 \alias{rdate}
-\title{rdate}
+\title{Prettier date}
 \usage{
 rdate()
 }
 \value{
-current date in normal person format
+Current date in a better format.
 }
 \description{
-rdate
+Sys.Date() but in a more familiar format and without unnecessary extras. dd-mm-yy
 }
 \examples{
 'rdate()'

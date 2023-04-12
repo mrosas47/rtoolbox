@@ -13,6 +13,9 @@
     <loc>/reference/as_x100.html</loc>
   </url>
   <url>
+    <loc>/reference/findShp.html</loc>
+  </url>
+  <url>
     <loc>/reference/get_rid.html</loc>
   </url>
   <url>
@@ -28,9 +31,15 @@
     <loc>/reference/rdate.html</loc>
   </url>
   <url>
+    <loc>/reference/rest2shp.html</loc>
+  </url>
+  <url>
     <loc>/reference/rtime.html</loc>
   </url>
   <url>
     <loc>/reference/x100of.html</loc>
+  </url>
+  <url>
+    <loc>/reference/zipShp.html</loc>
   </url>
 </urlset>

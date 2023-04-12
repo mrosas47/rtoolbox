@@ -2,16 +2,16 @@
 % Please edit documentation in R/notin.R
 \name{\%notin\%}
 \alias{\%notin\%}
-\title{%notin%}
+\title{Not in there}
 \usage{
 ... \%notin\% NA
 }
 \value{
-logical
+T or F
 }
 \description{
-anti %in%
+Literally the opposite of %in% and exactly the same as using !, but it's more explicit and easier to read.
 }
 \examples{
-'no example'
+# 'x' \%notin\% c('y', 'z')
 }

@@ -2,24 +2,24 @@
 % Please edit documentation in R/x100of.R
 \name{x100of}
 \alias{x100of}
-\title{Percentage}
+\title{Percent of}
 \usage{
 x100of(p, t, d = 2)
 }
 \arguments{
-\item{p}{percentage value}
+\item{p}{Desired percentage.}
 
-\item{t}{total}
+\item{t}{Total.}
 
-\item{d}{digits to round}
+\item{d}{Digits to round to.}
 }
 \value{
 x as a percentage of t
 }
 \description{
-Percentage
+Some percentage of a total.
 }
 \examples{
-x100of(25, 200)
+# x100of(25, 200)
 
 }

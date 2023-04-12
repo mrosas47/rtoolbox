@@ -2,19 +2,19 @@
 % Please edit documentation in R/findShp.R
 \name{findShp}
 \alias{findShp}
-\title{findShp}
+\title{Find shapefile}
 \usage{
 findShp(path)
 }
 \arguments{
-\item{path}{folder to use}
+\item{path}{Where to find the shapefiles. 'D:/example/location'}
 }
 \value{
-list of shapefiles (only .shp)
+Vector of shapefiles (only .shp).
 }
 \description{
-findShp
+Get a list (vector) of .shp files in a directory.
 }
 \examples{
-'not yet'
+# findShp('D:/example/location')
 }

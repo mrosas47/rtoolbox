@@ -1,28 +1,32 @@
-#' findShp
+#' @title Find shapefile
 #' 
-#' @param path folder to use
+#' @description Get a list (vector) of .shp files in a directory.
+#' 
+#' @param path Where to find the shapefiles. 'D:/example/location'
+#' 
+#' @import stringr
 #'
-#' @return list of shapefiles (only .shp)
+#' @return Vector of shapefiles (only .shp).
 #' @export findShp
 #'
-#' @examples 'not yet'
+#' @examples # findShp('D:/example/location')
+
 findShp <- function(path) {
   
   pass <- function() {}
   
   allFiles <- list.files(path = path)
-  
   bucket <- c()
   
   for (item in allFiles) {
     
-    if (str_sub(item, -3, -1) == 'shp') {
+    if (stringr::str_sub(item, -3, -1) == 'shp') {
       
       bucket <- c(bucket, item)
       
     } else {
       
-      pass()
+      rtoolbox::pass()
       
     }
     

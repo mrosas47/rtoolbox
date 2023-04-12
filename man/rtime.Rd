@@ -2,19 +2,19 @@
 % Please edit documentation in R/rtime.R
 \name{rtime}
 \alias{rtime}
-\title{rtime}
+\title{Prettier time}
 \usage{
 rtime(secs = T)
 }
 \arguments{
-\item{secs}{if true includes seconds}
+\item{secs}{Include seconds? T/F}
 }
 \value{
-current time
+Current time.
 }
 \description{
-rtime
+Sys.Time() but in a more familiar format and without unnecessary extras. HH:mm or HH:mm:ss
 }
 \examples{
-'rtime()'
+# rtime()
 }

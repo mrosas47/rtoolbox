@@ -1,15 +1,18 @@
 Package: rtoolbox
 Type: Package
 Title: rtoolbox: useful stuff
-Version: 0.0.6
+Version: 0.0.7
 Author: Martín Rosas
 Maintainer: Martín Rosas Araya <mrosas1690@gmail.com>
 Description: Useful stuff
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: false
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Imports:
     dplyr,
     stringr,
-    sf
+    sf,
+    zip,
+    arcgisbinding
+    

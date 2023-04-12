@@ -2,21 +2,21 @@
 % Please edit documentation in R/get_rid.R
 \name{get_rid}
 \alias{get_rid}
-\title{Get rid of ...}
+\title{Get rid of variable}
 \usage{
 get_rid(df, var.name)
 }
 \arguments{
-\item{df}{data.frame}
+\item{df}{data.frame object.}
 
-\item{var.name}{name (or names with c()) to be dropped}
+\item{var.name}{Name (or names with c()) of variables to be dropped}
 }
 \value{
-data.frame
+df without the specified variables.
 }
 \description{
-Get rid of ...
+Get rid of variables in less steps.
 }
 \examples{
-'i really dont wanna write rn'
+# df <- df |> get_rid('variableName')
 }
