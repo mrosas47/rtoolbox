@@ -16,6 +16,8 @@
 
 rest2shp <- function(serviceURL, path) {
   
+  arc.check_product()
+  
   rest <- arcgisbinding::arc.open(serviceURL)
   layerNames <- as.vector(unlist(rest@children))
   layerIndex <- as.numeric(0:(length(layerNames) - 1))
