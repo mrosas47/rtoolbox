@@ -27,7 +27,7 @@ rest2shp <- function(serviceURL, path) {
     layer <- arcgisbinding::arc.data2sf(
       arcgisbinding::arc.select(
         arcgisbinding::arc.open(
-          stringr::str_glue('{service}/{i}')
+          stringr::str_glue('{serviceURL}/{i}')
         )
       )
     )
