@@ -16,31 +16,48 @@
 
 rest2shp <- function(serviceURL, path) {
   
-  arc.check_product()
-  
-  lc <- 0
-  rest <- arcgisbinding::arc.open(serviceURL)
-  layerNames <- as.vector(unlist(rest@children))
-  layerIndex <- as.numeric(0:(length(layerNames) - 1))
-  
-  for (i in layerIndex) {
+  tryCatch({
     
-    layer <- arcgisbinding::arc.data2sf(
-      arcgisbinding::arc.select(
-        arcgisbinding::arc.open(
-          stringr::str_glue('{serviceURL}/{i}')
+    arc.check_product()
+    
+    lc <- 0
+    rest <- arcgisbinding::arc.open(serviceURL)
+    layerNames <- as.vector(unlist(rest@children))
+    layerIndex <- as.numeric(0:(length(layerNames) - 1))
+    
+    for (i in layerIndex) {
+      
+      tryCatch({
+        
+        layer <- arcgisbinding::arc.data2sf(
+        arcgisbinding::arc.select(
+          arcgisbinding::arc.open(
+            stringr::str_glue('{serviceURL}/{i}')
+          )
         )
       )
-    )
+      
+      layer |> sf::write_sf(stringr::str_glue('{path}/{str_sub(layerNames[i + 1], 3, -1)}.shp'))
+      
+      lc <- lc + 1
+      layerProg <- rtoolbox::as_x100(lc, length(layerIndex))
+      message(stringr::str_glue('{layerProg}% -- saved {str_sub(layerNames[i + 1], 3, -1)}'))
+        
+      },
+      error = function(e) {
+        
+        message(stringr::str_glue('Layer {str_sub(layerNames[i + 1], 3, -1)} failed to download.'))
+        next
+        
+      })
+      
+    }
     
-    layer |> sf::write_sf(stringr::str_glue('{path}/{str_sub(layerNames[i + 1], 3, -1)}.shp'))
+  },
+  error = function(e){
     
-    lc <- lc + 1
-    layerProg <- rtoolbox::as_x100(lc, length(layerIndex))
-    message(stringr::str_glue('{layerProg}% -- saved {layerNames[i + 1]}'))
+    message(stringr::str_glue('{serviceURL} generated a server error and was unable to generate a response.'))
     
-  }
-  
-  return(layer)
+  })
   
 }
