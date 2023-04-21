@@ -2,6 +2,7 @@
 
 export("%notin%")
 export(as_x100)
+export(fileSize)
 export(findShp)
 export(get_rid)
 export(pass)

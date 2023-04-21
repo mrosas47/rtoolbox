@@ -42,6 +42,8 @@ rest2shp <- function(serviceURL, path) {
       lc <- lc + 1
       layerProg <- rtoolbox::as_x100(lc, length(layerIndex))
       message(stringr::str_glue('{layerProg}% -- saved {str_sub(layerNames[i + 1], 3, -1)}'))
+      
+      Sys.sleep(60)
         
       },
       error = function(e) {
