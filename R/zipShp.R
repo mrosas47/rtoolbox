@@ -45,6 +45,7 @@ zipShp <- function(shapefile, shpDir, zipDir) {
     files = bucket
   )
   
-  message(stringr::str_glue('Zipped {shapefile}'))
+  zipfile = stringr::str_glue('{dirPath}/{prefix}.zip')
+  message(stringr::str_glue('Zipped {shapefile} as {zipfile} ({fileSize(zipfile)})'))
   
 }

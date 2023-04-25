@@ -37,18 +37,22 @@ rest2shp <- function(serviceURL, path) {
         )
       )
       
-      layer |> sf::write_sf(stringr::str_glue('{path}/{str_sub(layerNames[i + 1], 3, -1)}.shp'))
+      layer |> sf::write_sf(stringr::str_glue('{path}/{stringr::str_sub(layerNames[i + 1], 3, -1)}.shp'))
       
       lc <- lc + 1
       layerProg <- rtoolbox::as_x100(lc, length(layerIndex))
-      message(stringr::str_glue('{layerProg}% -- saved {str_sub(layerNames[i + 1], 3, -1)}'))
+      extList <- c('cpg', 'dbf', 'prj', 'sbn', 'sbx', 'shp', 'shp.xml', 'shx')
+      for(e in extList){
+        size<-fileSize(stringr::str_glue('{stringr::str_sub(layerNames[i + 1], 3, -1)}.{e})')) 
+        message(stringr::str_glue('{stringr::str_sub(layerNames[i + 1], 3, -1)}.{e} - {}'))}
+      message(stringr::str_glue('{layerProg}% -- saved {stringr::str_sub(layerNames[i + 1], 3, -1)}'))
       
       Sys.sleep(60)
         
       },
       error = function(e) {
         
-        message(stringr::str_glue('Layer {str_sub(layerNames[i + 1], 3, -1)} failed to download.'))
+        message(stringr::str_glue('Layer {stringr::str_sub(layerNames[i + 1], 3, -1)} failed to download.'))
         next
         
       })
