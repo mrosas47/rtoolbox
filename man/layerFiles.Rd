@@ -4,7 +4,7 @@
 \alias{layerFiles}
 \title{File that make a shapefile}
 \usage{
-layerFiles(shapefile)
+layerFiles(shapefile, full.names = T)
 }
 \arguments{
 \item{shapefile}{Name of the shapefile in question.}

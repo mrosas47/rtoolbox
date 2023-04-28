@@ -15,7 +15,7 @@ zip0 <- function(zipfile, files, overwrite = TRUE, mode = 'mirror') {
   
   if (file.exists(zipfile) && !overwrite) {
     
-    message(paste0("Zip file ", zipfile, " already exists. Use 'overwrite = TRUE' to overwrite."))
+    message(paste("Zip file ", zipfile, " already exists. Use 'overwrite = TRUE' to overwrite."))
     return(NULL)
     
   }
@@ -30,7 +30,7 @@ zip0 <- function(zipfile, files, overwrite = TRUE, mode = 'mirror') {
       
     } else {
       
-      message(paste0("Skipping ", file))
+      message(paste("Skipping ", file))
       
     }
   }
@@ -43,6 +43,6 @@ zip0 <- function(zipfile, files, overwrite = TRUE, mode = 'mirror') {
   }
   
   zip::zip(zipfile, valid_files, mode = mode)
-  message(paste0("Successfully created zip archive: ", zipfile))
+  message(str_glue("Successfully created zip archive {zipfile} ({fileSize(zipfile)})"))
   
 }

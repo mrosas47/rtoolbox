@@ -23,9 +23,13 @@ fileSize <- function(path) {
     
     fSize <- paste(round(size / 1024 ^ 2, 2), 'MB')
     
-  } else {
+  } else if (size < 1024 ^ 4) {
     
     fSize <- paste(round(size / 1024 ^ 3, 2), 'GB')
+    
+  } else {
+    
+    fSize <- paste(round(size / 1024 ^ 4, 2), 'TB')
     
   }
   
