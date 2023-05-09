@@ -11,17 +11,17 @@
 
 shpSize <- function(shapefile) {
   
-  size <- 0
-  f <- layerFiles(shapefile)
+  bucket <- c()
+  f <- rtoolbox::layerFiles(shapefile)
   
   for (item in f) {
     
-    if (file.exists(item)) {
+    if (file.exists(item) == T) {
       
       x <- file.size(item)
-      size <- size + x
+      bucket <- c(bucket, x)
       
-    } else {
+    } else if (file.exists(item) == F) {
       
       next
       
@@ -29,6 +29,30 @@ shpSize <- function(shapefile) {
     
   }
   
-  return(size)
+  size <- sum(bucket, na.rm = T)
+  
+  if (size < 1024) {
+    
+    fSize <- paste(size, 'bytes')
+    
+  } else if (size < 1024 ^ 2) {
+    
+    fSize <- paste(round(size / 1024, 2), 'KB')
+    
+  } else if (size < 1024 ^ 3) {
+    
+    fSize <- paste(round(size / 1024 ^ 2, 2), 'MB')
+    
+  } else if (size < 1024 ^ 4) {
+    
+    fSize <- paste(round(size / 1024 ^ 3, 2), 'GB')
+    
+  } else {
+    
+    fSize <- paste(round(size / 1024 ^ 4, 2), 'TB')
+    
+  }
+  
+  return(fSize)
   
 }

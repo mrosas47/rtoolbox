@@ -18,7 +18,7 @@ rest2shp <- function(serviceURL, path) {
   
   tryCatch({
     
-    arc.check_product()
+    arcgisbinding::arc.check_product()
     
     lc <- 0
     rest <- arcgisbinding::arc.open(serviceURL)
@@ -28,26 +28,25 @@ rest2shp <- function(serviceURL, path) {
     for (i in layerIndex) {
       
       tryCatch({
+      
+        suppressMessages({
+          
+        link <- paste(s, '/', as.character(layerIndex[i + 1]), '/query?where=1%3D1&outFields=*&f=pjson', sep = '')
+        layer <- sf::st_read(link)
+        layer |> sf::st_write(stringr::str_glue('{path}/{stringr::str_sub(layerNames[i + 1], 3, -1)}.shp'))
+          
+        })
         
-        layer <- arcgisbinding::arc.data2sf(
-        arcgisbinding::arc.select(
-          arcgisbinding::arc.open(
-            stringr::str_glue('{serviceURL}/{i}')
-          )
-        )
-      )
-      
-      layer |> sf::write_sf(stringr::str_glue('{path}/{stringr::str_sub(layerNames[i + 1], 3, -1)}.shp'))
-      
-      lc <- lc + 1
-      layerProg <- rtoolbox::as_x100(lc, length(layerIndex))
-      extList <- c('cpg', 'dbf', 'prj', 'sbn', 'sbx', 'shp', 'shp.xml', 'shx')
-      for(e in extList){
-        size<-fileSize(stringr::str_glue('{stringr::str_sub(layerNames[i + 1], 3, -1)}.{e})')) 
-        message(stringr::str_glue('{stringr::str_sub(layerNames[i + 1], 3, -1)}.{e} - {}'))}
-      message(stringr::str_glue('{layerProg}% -- saved {stringr::str_sub(layerNames[i + 1], 3, -1)}'))
-      
-      Sys.sleep(60)
+        rm(link)
+        rm(layer)
+        gc()
+        
+        lc <- lc + 1
+        layerProg <- rtoolbox::as_x100(lc, length(layerIndex))
+  
+        message(stringr::str_glue('{layerProg}% -- saved {stringr::str_sub(layerNames[i + 1], 3, -1)}'))
+        
+        # Sys.sleep(60)
         
       },
       error = function(e) {
@@ -60,7 +59,7 @@ rest2shp <- function(serviceURL, path) {
     }
     
   },
-  error = function(e){
+  error = function(e) {
     
     message(stringr::str_glue('{serviceURL} generated a server error and was unable to generate a response.'))
     

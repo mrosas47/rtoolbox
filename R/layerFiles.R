@@ -15,27 +15,29 @@ layerFiles <- function(shapefile, full.names = T) {
   directory <- dirname(shapefile)
   extList <- c('cpg', 'dbf', 'prj', 'sbn', 'sbx', 'shp', 'shp.xml', 'shx')
   
-  if (end == 'shp' & full.names == F) {
-    
-    prefix <- stringr::str_sub(shapefile, 1, -5)
-    
-  } else if (end != 'shp' & full.names == F) {
-    
-    prefix <- shapefile
-    
-  } else if (end == 'shp' & full.names == T) {
-    
-    prefix <- stringr::str_sub(basename(shapefile), 1, -5)
-    
-  } else if (end != 'shp' & full.names == T) {
-    
-    prefix <- stringr::str_sub(basename(shapefile), 1, -5)
-    
-  } else {
-    
-    message('am confused')
-    
-  }
+  # if (end == 'shp' & full.names == F) {
+  #   
+  #   prefix <- stringr::str_sub(shapefile, 1, -5)
+  #   
+  # } else if (end != 'shp' & full.names == F) {
+  #   
+  #   prefix <- shapefile
+  #   
+  # } else if (end == 'shp' & full.names == T) {
+  #   
+  #   prefix <- stringr::str_sub(basename(shapefile), 1, -5)
+  #   
+  # } else if (end != 'shp' & full.names == T) {
+  #   
+  #   prefix <- stringr::str_sub(basename(shapefile), 1, -5)
+  #   
+  # } else {
+  #   
+  #   message('am confused')
+  #   
+  # }
+  
+  prefix <- stringr::str_sub(basename(shapefile), 1, -5)
   
   bucket <- c()
   
