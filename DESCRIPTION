@@ -13,6 +13,5 @@ Imports:
     dplyr,
     stringr,
     sf,
-    zip,
-    arcgisbinding
+    zip
     
