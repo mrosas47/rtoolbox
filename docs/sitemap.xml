@@ -19,6 +19,9 @@
     <loc>/reference/findShp.html</loc>
   </url>
   <url>
+    <loc>/reference/findTif.html</loc>
+  </url>
+  <url>
     <loc>/reference/get_rid.html</loc>
   </url>
   <url>
@@ -43,7 +46,16 @@
     <loc>/reference/rtime.html</loc>
   </url>
   <url>
+    <loc>/reference/sgc.html</loc>
+  </url>
+  <url>
     <loc>/reference/shpSize.html</loc>
+  </url>
+  <url>
+    <loc>/reference/silent.html</loc>
+  </url>
+  <url>
+    <loc>/reference/wdEnsure.html</loc>
   </url>
   <url>
     <loc>/reference/x100of.html</loc>
