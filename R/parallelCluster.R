@@ -2,6 +2,11 @@
 #'
 #' @param n_cores number of cores
 #' @param type type of cluster
+#' 
+#' @import parallel
+#' @import doParallel
+#' @import foreach
+#' @import cli
 #'
 #' @return cluster object
 #' @export parallelCluster
