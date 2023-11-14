@@ -10,7 +10,7 @@ sgc()
 nothing
 }
 \description{
-Runs `gc()` inside `rtoolbox::silent()` so as to clean with no message.
+Runs `gc()` inside `invisible()` so as to clean with no message.
 }
 \examples{
 sgc()

@@ -1,7 +1,7 @@
 Package: rtoolbox
 Type: Package
 Title: rtoolbox: useful stuff
-Version: 0.0.17
+Version: 0.0.18
 Author: Martín Rosas
 Maintainer: Martín Rosas Araya <mrosas1690@gmail.com>
 Description: Useful stuff
@@ -14,5 +14,9 @@ Imports:
     stringr,
     sf,
     zip,
-    xfun
+    xfun,
+    foreach,
+    doParallel,
+    parallel,
+    cli
     
