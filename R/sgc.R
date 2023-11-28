@@ -11,6 +11,10 @@
 
 sgc <- function () {
   
-  invisible({gc()})
+  suppressMessages({
+    
+    gc()
+    
+  })
   
 }

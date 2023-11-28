@@ -12,7 +12,7 @@
 #' @export parallelCluster
 #'
 #' @examples
-#' parallelCluster()
+#' cl <- parallelCluster()
 #' 
 parallelCluster <- function(n_cores = NULL, type = 'PSOCK') {
   
@@ -40,6 +40,7 @@ parallelCluster <- function(n_cores = NULL, type = 'PSOCK') {
   } else {
     
     cli::cli_alert_danger('Parallel cluster registration failed.')
+    stopCluster(c)
     stop()
     
   }

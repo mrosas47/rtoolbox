@@ -40,7 +40,7 @@ zipShp <- function(shapefile, shpDir, zipDir) {
     
   }
   
-  zip::zip(
+  rtoolbox::zip0(
     zipfile = stringr::str_glue('{dirPath}/{prefix}.zip'),
     files = bucket
   )

@@ -18,6 +18,6 @@ cluster object
 parallelCluster
 }
 \examples{
-parallelCluster()
+cl <- parallelCluster()
 
 }
