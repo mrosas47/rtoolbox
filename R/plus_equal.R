@@ -3,6 +3,6 @@
 #' @import roperators
 #' @export %+=%
 #' @examples # Will do this later
-#' @return Same logic as magrittr's assignment pipe
+#' @return Same logic as ropreators's `%+=%`
 
 `%+=%` <- roperators::`%+=%`
