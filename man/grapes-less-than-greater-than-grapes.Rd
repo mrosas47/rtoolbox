@@ -2,7 +2,7 @@
 % Please edit documentation in R/assignment_pipe.R
 \name{\%<>\%}
 \alias{\%<>\%}
-\title{Magrittr's assignment pipe}
+\title{`magrittr`'s assignment pipe}
 \usage{
 lhs \%<>\% rhs
 }

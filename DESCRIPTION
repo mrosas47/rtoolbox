@@ -1,7 +1,7 @@
 Package: rtoolbox
 Type: Package
 Title: rtoolbox: useful stuff
-Version: 0.0.19
+Version: 0.0.20
 Author: Martín Rosas
 Maintainer: Martín Rosas Araya <mrosas1690@gmail.com>
 Description: Useful stuff
@@ -19,4 +19,5 @@ Imports:
     doParallel,
     parallel,
     cli,
-    magrittr
+    magrittr,
+    roperators
