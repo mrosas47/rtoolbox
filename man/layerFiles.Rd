@@ -2,19 +2,23 @@
 % Please edit documentation in R/layerFiles.R
 \name{layerFiles}
 \alias{layerFiles}
-\title{File that make a shapefile}
+\title{List files that make up a shapefile}
 \usage{
-layerFiles(shapefile, full.names = T)
+layerFiles(shapefile, full.names = T, only.existent = F)
 }
 \arguments{
 \item{shapefile}{Name of the shapefile in question.}
+
+\item{full.names}{Whether to return full names (full path) or not. Default is `TRUE`.}
+
+\item{only.existent}{Whether to return only files that exist. Default is `FALSE`, so it will return a list of all possible files that will make the shapefile. If you only need the ones that actually exist, set this to `TRUE`.}
 }
 \value{
 Vector
 }
 \description{
-File that make a shapefile
+Get a vector containing all files that make up a shapefile.
 }
 \examples{
-# layerFiles()
+ layerFiles('example.shp')
 }

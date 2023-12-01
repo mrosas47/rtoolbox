@@ -1,9 +1,7 @@
-#' Ensure working directory
+#' @title Ensure working directory
 #' 
-#' @description
-#' Make sure that the working directory is set correctly. It aims to eliminate the need to explicitly write an `if` statement and can replace `setwd()`.
+#' @description Make sure that the working directory is set correctly. It aims to eliminate the need to explicitly write an `if` statement and can replace `setwd()`.
 #' 
-#'
 #' @param wd Working directory
 #'
 #' @return Message indicating the result of setting the working directory.

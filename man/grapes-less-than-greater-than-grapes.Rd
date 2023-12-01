@@ -13,5 +13,7 @@ Same logic as magrittr's assignment pipe
 Literally the same as magrittr's assignment pipe `%<>%`. Just did not want to call `library(magrittr, include.only = '%<>%')` every time I wanted to use it, and since I do load `rtoolbox` every time it was simpler to have it here.
 }
 \examples{
-# Will do this later
+  foo <- data.frame(x = 1:10, y = 11:20)
+  foo \%<>\% dplyr::mutate(z = x + y)
+  foo
 }

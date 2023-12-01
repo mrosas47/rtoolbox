@@ -1,6 +1,6 @@
 #' @title Find shapefile
 #' 
-#' @description Get a list (vector) of .shp files in a directory.
+#' @description Get a list (vector) of .shp files in a directory. Useful when looping over a directory containing all file types that make a shapefile. It allows to easily list and loop over only the .shp files, e.g. when using `sf::st_read()`.
 #' 
 #' @param path Where to find the shapefiles. 'D:/example/location'
 #' 
@@ -9,7 +9,8 @@
 #' @return Vector of shapefiles (only .shp).
 #' @export findShp
 #'
-#' @examples # findShp('D:/example/location')
+#' @examples 
+#'   findShp('C:/example/location')
 
 findShp <- function(path) {
   

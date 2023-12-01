@@ -1,13 +1,15 @@
 #' @title Prettier date
 #' 
-#' @description Sys.Date() but in a more familiar format and without unnecessary extras. dd-mm-yy
+#' @description Sys.Date() but in a more familiar format and without unnecessary extras. Useful when reporting to the console or writing metadata.
 #' 
 #' @import stringr
 #'
-#' @return Current date in a better format.
+#' @return Current date in a simpler dd-mm-yy format.
 #' @export rdate
 #'
-#' @examples 'rdate()'
+#' @examples 
+#'   rdate()
+
 rdate <- function() {
   
   current_date <- Sys.Date()

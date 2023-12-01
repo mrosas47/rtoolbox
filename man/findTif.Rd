@@ -13,8 +13,8 @@ findTif(path, full = F)
 Vector of TIFs
 }
 \description{
-Get a list (vector) of .tif files in a directory.
+Get a list (vector) of .tif files in a directory. Useful when looping over a directory that contains .tif files that come with .aux files.
 }
 \examples{
-  # Example
+  findTif('C:/example/location')
 }

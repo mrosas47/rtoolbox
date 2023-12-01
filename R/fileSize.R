@@ -1,11 +1,13 @@
-#' Readable file size
+#' @title Readable file size
 #'
+#' @description Returns the file size in a readable format; useful for reporting exported file size in console.
 #' @param path Where to find the file in question.
 #'
 #' @return File size in a readable format.
 #' @export fileSize
 #'
-#' @examples # fileSize('path/to/file.example')
+#' @examples 
+#'   fileSize('path/to/file.example')
 
 fileSize <- function(path) {
   
@@ -13,7 +15,7 @@ fileSize <- function(path) {
   
   if (size < 1024) {
     
-    fSize <- paste(size, 'bytes')
+    fSize <- paste(size, 'Bytes')
     
   } else if (size < 1024 ^ 2) {
     

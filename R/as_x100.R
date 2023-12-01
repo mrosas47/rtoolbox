@@ -9,7 +9,7 @@
 #' @return x as a percentage of t
 #' @export as_x100
 #'
-#' @examples # as_x100(25, 200, 3)
+#' @examples as_x100(sample(1:10, 1), sample(100:1000, 1), 3)
 
 as_x100 <- function (x, t, d = 2) {
   

@@ -2,20 +2,20 @@
 % Please edit documentation in R/parallelCluster.R
 \name{parallelCluster}
 \alias{parallelCluster}
-\title{parallelCluster}
+\title{Directly make parallel cluster}
 \usage{
 parallelCluster(n_cores = NULL, type = "PSOCK")
 }
 \arguments{
-\item{n_cores}{number of cores}
+\item{n_cores}{number of cores. If NULL, the number of cores is detected and one is subtracted from that number so as to not overload the system.}
 
-\item{type}{type of cluster}
+\item{type}{type of cluster.}
 }
 \value{
-cluster object
+Parallel cluster object
 }
 \description{
-parallelCluster
+Make a parallel cluster with the number of cores specified. If no number of cores is specified, the number of cores is detected and one is subtracted from that number. The cluster is registered with `doParallel` and the number of workers is returned.
 }
 \examples{
 cl <- parallelCluster()

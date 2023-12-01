@@ -13,8 +13,8 @@ shpSize(shapefile)
 Size of shapefile bundle
 }
 \description{
-Size of shapefile bundle, including all extensions that make up a shapefile.
+Size of shapefile bundle, including all extensions that make up a shapefile. Useful for reporting.
 }
 \examples{
-# ''
+  shpSize('example.shp')
 }

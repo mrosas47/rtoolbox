@@ -10,11 +10,11 @@ rtime(secs = T)
 \item{secs}{Include seconds? T/F}
 }
 \value{
-Current time.
+Current time in simpler HH:mm or HH:mm:ss format.
 }
 \description{
-Sys.Time() but in a more familiar format and without unnecessary extras. HH:mm or HH:mm:ss
+Sys.Time() but in a more familiar format and without unnecessary extras. Useful when reporting to the console; really helps with understanding execution flow.
 }
 \examples{
-# rtime()
+  rtime()
 }

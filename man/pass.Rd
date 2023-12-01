@@ -2,13 +2,16 @@
 % Please edit documentation in R/pass.R
 \name{pass}
 \alias{pass}
-\title{Nothing}
+\title{Pass}
 \usage{
 pass()
 }
+\value{
+Nothing!
+}
 \description{
-Literally does nothing. Mimics Python's 'pass' statement and just makes it a bit more familiar for someone that's used to Py.
+Literally does nothing. Mimics Python's 'pass' statement and just makes it a bit more familiar for someone that's used to Py. Useful for more explicit if statements.
 }
 \examples{
-# if (1 > 2) {print('no')} else {pass()}
+ if (1 > 0) {print('1 is greater than 0')} else {pass()}
 }

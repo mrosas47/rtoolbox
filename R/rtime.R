@@ -1,15 +1,16 @@
 #' @title Prettier time
 #'
-#' @description Sys.Time() but in a more familiar format and without unnecessary extras. HH:mm or HH:mm:ss
+#' @description Sys.Time() but in a more familiar format and without unnecessary extras. Useful when reporting to the console; really helps with understanding execution flow.
 #' 
 #' @param secs Include seconds? T/F
 #' 
 #' @import stringr
 #'
-#' @return Current time.
+#' @return Current time in simpler HH:mm or HH:mm:ss format.
 #' @export rtime
 #'
-#' @examples # rtime()
+#' @examples 
+#'   rtime()
 
 rtime <- function(secs = T) {
   

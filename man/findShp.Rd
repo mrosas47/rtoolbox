@@ -13,8 +13,8 @@ findShp(path)
 Vector of shapefiles (only .shp).
 }
 \description{
-Get a list (vector) of .shp files in a directory.
+Get a list (vector) of .shp files in a directory. Useful when looping over a directory containing all file types that make a shapefile. It allows to easily list and loop over only the .shp files, e.g. when using `sf::st_read()`.
 }
 \examples{
-# findShp('D:/example/location')
+  findShp('C:/example/location')
 }

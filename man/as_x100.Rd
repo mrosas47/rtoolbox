@@ -20,5 +20,5 @@ x as a percentage of t
 Takes a value and a total and returns the value as a percentage of that total.
 }
 \examples{
-# as_x100(25, 200, 3)
+as_x100(sample(1:10, 1), sample(100:1000, 1), 3)
 }

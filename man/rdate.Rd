@@ -7,11 +7,11 @@
 rdate()
 }
 \value{
-Current date in a better format.
+Current date in a simpler dd-mm-yy format.
 }
 \description{
-Sys.Date() but in a more familiar format and without unnecessary extras. dd-mm-yy
+Sys.Date() but in a more familiar format and without unnecessary extras. Useful when reporting to the console or writing metadata.
 }
 \examples{
-'rdate()'
+  rdate()
 }

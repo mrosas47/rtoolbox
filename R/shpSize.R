@@ -1,13 +1,14 @@
 #' @title Size of shapefile
 #' 
-#' @description Size of shapefile bundle, including all extensions that make up a shapefile.
+#' @description Size of shapefile bundle, including all extensions that make up a shapefile. Useful for reporting.
 #'
 #' @param shapefile Name of the shapefile.
 #'
 #' @return Size of shapefile bundle
 #' @export shpSize
 #'
-#' @examples # ''
+#' @examples
+#'   shpSize('example.shp')
 
 shpSize <- function(shapefile) {
   

@@ -13,8 +13,8 @@ fileSize(path)
 File size in a readable format.
 }
 \description{
-Readable file size
+Returns the file size in a readable format; useful for reporting exported file size in console.
 }
 \examples{
-# fileSize('path/to/file.example')
+  fileSize('path/to/file.example')
 }
