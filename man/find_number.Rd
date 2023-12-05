@@ -4,7 +4,7 @@
 \alias{find_number}
 \title{Find numbers in a string}
 \usage{
-find_number(string, digits = 2, all = FALSE)
+find_number(string, digits = NULL, all = F)
 }
 \arguments{
 \item{string}{String in which to look}
@@ -20,7 +20,7 @@ Vector with the found numbers.
 Finds numbers qithin a string. Can find any specified number of digits and can return either the first instances or all instances.
 }
 \examples{
-find_number("There are 123 apples and 456 oranges", digits = 3, all = T)
-find_number("My number is 42", all = TRUE)
-find_number("No numbers here", digits = 1)
+find_number('There are 123 apples and 456 oranges', digits = 3, all = T)
+find_number('My number is 42', all = TRUE)
+find_number('No numbers here', digits = 1)
 }

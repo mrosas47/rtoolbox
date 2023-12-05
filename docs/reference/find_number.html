@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rtoolbox</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.22</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.23</span>
       </span>
     </div>
 
@@ -44,7 +44,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">find_number</span><span class="op">(</span><span class="va">string</span>, digits <span class="op">=</span> <span class="fl">2</span>, all <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">find_number</span><span class="op">(</span><span class="va">string</span>, digits <span class="op">=</span> <span class="cn">NULL</span>, all <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -70,12 +70,12 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">find_number</span><span class="op">(</span><span class="st">"There are 123 apples and 456 oranges"</span>, digits <span class="op">=</span> <span class="fl">3</span>, all <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "123" "456"</span>
-<span class="r-in"><span><span class="fu">find_number</span><span class="op">(</span><span class="st">"My number is 42"</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "42"</span>
-<span class="r-in"><span><span class="fu">find_number</span><span class="op">(</span><span class="st">"No numbers here"</span>, digits <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> character(0)</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">find_number</span><span class="op">(</span><span class="st">'There are 123 apples and 456 oranges'</span>, digits <span class="op">=</span> <span class="fl">3</span>, all <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 123 456</span>
+<span class="r-in"><span><span class="fu">find_number</span><span class="op">(</span><span class="st">'My number is 42'</span>, all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 42</span>
+<span class="r-in"><span><span class="fu">find_number</span><span class="op">(</span><span class="st">'No numbers here'</span>, digits <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> numeric(0)</span>
 </code></pre></div>
     </div>
   </div>
