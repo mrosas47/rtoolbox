@@ -2,7 +2,7 @@
 % Please edit documentation in R/minus_equal.R
 \name{\%-=\%}
 \alias{\%-=\%}
-\title{`roperators`'s miuns-equal}
+\title{`roperators`'s minus-equal}
 \usage{
 x \%-=\% y
 }

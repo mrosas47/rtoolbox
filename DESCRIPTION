@@ -1,7 +1,7 @@
 Package: rtoolbox
 Type: Package
 Title: rtoolbox: useful stuff
-Version: 0.0.23
+Version: 0.0.24
 Author: Martín Rosas
 Maintainer: Martín Rosas Araya <mrosas1690@gmail.com>
 Description: Useful stuff
