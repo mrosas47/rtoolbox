@@ -19,7 +19,7 @@ Clears global environment.
 \description{
 Literally the opposite of %in% and exactly the same as using !, but it's more explicit and easier to read.
 
-Remove all objects from environment. Direct implementation of `rm(list = ls(envir = globalenv()))`. Also gives the option to keep specific objects.
+Remove all objects from environment. Direct implementation of `rm(list = ls(envir = globalenv()))`. Also gives the option to keep specific objects. Skips non-existing objects in the `except` vector.
 }
 \examples{
   'x' \%notin\% c('y', 'z')
