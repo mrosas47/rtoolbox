@@ -1,14 +1,14 @@
 Package: rtoolbox
 Type: Package
 Title: rtoolbox: useful stuff
-Version: 0.0.27
+Version: 0.0.29
 Author: Martín Rosas
 Maintainer: Martín Rosas Araya <mrosas1690@gmail.com>
 Description: Useful stuff
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: false
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Imports:
     dplyr,
     stringr,
@@ -20,4 +20,5 @@ Imports:
     parallel,
     cli,
     magrittr,
-    roperators
+    roperators,
+    tidyselect
