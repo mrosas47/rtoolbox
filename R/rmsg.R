@@ -7,4 +7,4 @@
 #'
 #' @examples # not yet
 
-rmsg <- function(msg) return(stringr::str_glue('{rtime} -- {msg}'))
+rmsg <- function(msg) return(stringr::str_glue('{rtime()} -- {msg}'))
