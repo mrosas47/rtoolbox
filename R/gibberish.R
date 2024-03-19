@@ -17,7 +17,7 @@ gibberish <- function(n = 15, low_alpha = T, upp_alpha = T, num = T, sym = T, bl
   lows <- letters
   upps <- LETTERS
   nums <- as.character(0:9)
-  syms <- strsplit(intToUtf8(c(33:46, 58:64, 91:95, 123:126)), '')[[1]]
+  syms <- strsplit(intToUtf8(c(33, 35:46, 58:64, 91, 93:95, 126)), '')[[1]]
   
   pool <- c()
   
