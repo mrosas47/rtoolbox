@@ -13,6 +13,10 @@
 
 wdEnsure <- function(wd) {
   
+  os <- Sys.info()['sysname']
+  if (os == 'Windows' & stringr::str_sub(wd, 1, 6) == '/nexus') wd <- stringr::str_replace(wd, '/nexus', 'N:')
+  if (os == 'Linux' & stringr::str_sub(wd, 1, 1) == 'N') wd <- stringr::str_replace(wd, 'N:/', '/nexus')
+  
   tryCatch({
     
     if (getwd() != wd) {
